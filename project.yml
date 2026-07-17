@@ -1,0 +1,28 @@
+name: CATalog
+
+options:
+  bundleIdPrefix: com.olyn
+
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+
+targets:
+  CATalog:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.0"
+
+    sources:
+      - App
+      - Features
+      - Core
+
+    resources:
+      - Assets
+      - Resources
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.olyn.CATalog
+        GENERATE_INFOPLIST_FILE: YES
