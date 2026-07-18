@@ -7,34 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8464DB00BD1F667522CE5836 /* CATalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26B7E3DAB2331486C0AB585 /* CATalogApp.swift */; };
+		2FBD9796300BCCBE005479BA /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD9795300BCCBD005479BA /* RootTabView.swift */; };
+		2FBD97AE300BCEE9005479BA /* AchievementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD97AD300BCEE4005479BA /* AchievementView.swift */; };
+		2FBD97B0300BCEEF005479BA /* AchievementVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD97AF300BCEEC005479BA /* AchievementVM.swift */; };
+		2FBD97B2300BCF44005479BA /* CATalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBD97B1300BCF44005479BA /* CATalogApp.swift */; };
 		8C8A4D27619D623856310591 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D139DA63D237F8C5FB2311 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		212EFAAEB0DECF04584D4396 /* CATalog.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CATalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FBD9795300BCCBD005479BA /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
+		2FBD97A1300BCE88005479BA /* CatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailView.swift; sourceTree = "<group>"; };
+		2FBD97A2300BCE93005479BA /* CatDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailVM.swift; sourceTree = "<group>"; };
+		2FBD97AD300BCEE4005479BA /* AchievementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementView.swift; sourceTree = "<group>"; };
+		2FBD97AF300BCEEC005479BA /* AchievementVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVM.swift; sourceTree = "<group>"; };
+		2FBD97B1300BCF44005479BA /* CATalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATalogApp.swift; sourceTree = "<group>"; };
 		84D139DA63D237F8C5FB2311 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C26B7E3DAB2331486C0AB585 /* CATalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATalogApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		2F039557300A80CB00B674C1 /* Exceptions for "Models" folder in "CATalog" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Cat.swift,
-				CoatColor.swift,
-			);
-			target = A697745E6132F2952BD82E0B /* CATalog */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2F039554300A807B00B674C1 /* Models */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				2F039557300A80CB00B674C1 /* Exceptions for "Models" folder in "CATalog" target */,
-			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2FBD978D300BCC5A005479BA /* Services */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2FBD978E300BCC67005479BA /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FBD978F300BCC6D005479BA /* Components */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2FBD9790300BCC78005479BA /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		2FBD9791300BCC81005479BA /* Home */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2FBD9792300BCC86005479BA /* Add */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -43,8 +67,30 @@
 		1AB9804EF304F68ADCD4B8FD /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2FBD9791300BCC81005479BA /* Home */,
+				2FBD9792300BCC86005479BA /* Add */,
+				2FBD9793300BCC98005479BA /* Detail */,
+				2FBD9794300BCC9C005479BA /* Achievement */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		2FBD9793300BCC98005479BA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				2FBD97A1300BCE88005479BA /* CatDetailView.swift */,
+				2FBD97A2300BCE93005479BA /* CatDetailVM.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		2FBD9794300BCC9C005479BA /* Achievement */ = {
+			isa = PBXGroup;
+			children = (
+				2FBD97AD300BCEE4005479BA /* AchievementView.swift */,
+				2FBD97AF300BCEEC005479BA /* AchievementVM.swift */,
+			);
+			path = Achievement;
 			sourceTree = "<group>";
 		};
 		7460DAADB1F9FB3A077AD3C3 = {
@@ -60,7 +106,8 @@
 		D9350EB0E8BBAFD225A372B0 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				C26B7E3DAB2331486C0AB585 /* CATalogApp.swift */,
+				2FBD9795300BCCBD005479BA /* RootTabView.swift */,
+				2FBD97B1300BCF44005479BA /* CATalogApp.swift */,
 				84D139DA63D237F8C5FB2311 /* ContentView.swift */,
 			);
 			path = App;
@@ -78,6 +125,10 @@
 			isa = PBXGroup;
 			children = (
 				2F039554300A807B00B674C1 /* Models */,
+				2FBD978D300BCC5A005479BA /* Services */,
+				2FBD9790300BCC78005479BA /* Utils */,
+				2FBD978F300BCC6D005479BA /* Components */,
+				2FBD978E300BCC67005479BA /* Extensions */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -94,6 +145,15 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				2F039554300A807B00B674C1 /* Models */,
+				2FBD978D300BCC5A005479BA /* Services */,
+				2FBD978E300BCC67005479BA /* Extensions */,
+				2FBD978F300BCC6D005479BA /* Components */,
+				2FBD9790300BCC78005479BA /* Utils */,
+				2FBD9791300BCC81005479BA /* Home */,
+				2FBD9792300BCC86005479BA /* Add */,
 			);
 			name = CATalog;
 			packageProductDependencies = (
@@ -135,8 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8464DB00BD1F667522CE5836 /* CATalogApp.swift in Sources */,
+				2FBD97B0300BCEEF005479BA /* AchievementVM.swift in Sources */,
+				2FBD97AE300BCEE9005479BA /* AchievementView.swift in Sources */,
 				8C8A4D27619D623856310591 /* ContentView.swift in Sources */,
+				2FBD9796300BCCBE005479BA /* RootTabView.swift in Sources */,
+				2FBD97B2300BCF44005479BA /* CATalogApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

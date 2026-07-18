@@ -12,33 +12,40 @@ import SwiftData
 final class Cat {
     var id: UUID
     var name: String?
-    var photo: Data
-    var encounterCount: Int
     var createdAt: Date
-    var firstEncounter: Date
-    var lastSeen: Date
-    var locationName: String?
-    var coatColor: CoatColor?
     var notes: String?
-    
+    var coatColor: CoatColor?
+
+    @Relationship(deleteRule: .cascade)
+    var encounters: [Encounter]
+
     init(
         name: String? = nil,
-        photo: Data,
-        firstEncounter: Date,
-        lastSeen: Date,
-        locationName: String? = nil,
-        coatColor: CoatColor? = nil,
-        notes: String? = nil
+        notes: String? = nil,
+        coatColor: CoatColor? = nil
     ) {
-        self.id = UUID()
+        id = UUID()
+        createdAt = Date()
+
         self.name = name
-        self.photo = photo
-        self.encounterCount = 1
-        self.createdAt = Date()
-        self.firstEncounter = firstEncounter
-        self.lastSeen = lastSeen
-        self.locationName = locationName
-        self.coatColor = coatColor
         self.notes = notes
+        self.coatColor = coatColor
+
+        encounters = []
+    }
+}
+
+extension Cat {
+
+    var encounterCount: Int {
+        encounters.count
+    }
+
+    var firstEncounter: Date? {
+        encounters.min(by: { $0.date < $1.date })?.date
+    }
+
+    var lastSeen: Date? {
+        encounters.max(by: { $0.date < $1.date })?.date
     }
 }
