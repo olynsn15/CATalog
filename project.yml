@@ -5,7 +5,7 @@ options:
 
 settings:
   base:
-    SWIFT_VERSION: 6.0
+    SWIFT_VERSION: "6.0"
 
 targets:
   CATalog:
@@ -26,3 +26,10 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.olyn.CATalog
         GENERATE_INFOPLIST_FILE: YES
+
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS: YES
