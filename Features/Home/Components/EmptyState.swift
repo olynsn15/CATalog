@@ -14,29 +14,23 @@ struct EmptyState: View {
     var body: some View {
         
         VStack(spacing: 50) {
-            VStack(spacing: 15) {
+            VStack(spacing: 40) {
                 Image(systemName: "cat.fill")
                     .font(.system(size: 60))
                     .foregroundStyle(.gray)
                 
-                Text("Capture your first cat.")
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center)
+                VStack(spacing: 5){
+                    Text("Meet a cat?")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                    
+                    Text("Start your CATalog")
+                        .font(.body)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
             }
-            
-            Button {
-                onCapture()
-            } label: {
-                Label("Add First Cat",
-                      systemImage: "camera.fill")
-                .font(.title3.bold())
-                .padding(.horizontal, 10)
-            }
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .tint(.orange)
-            
         }
         .frame(maxWidth: .infinity)
         .frame(maxHeight: .infinity)

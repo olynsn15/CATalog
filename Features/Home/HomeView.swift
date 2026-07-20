@@ -8,76 +8,82 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
     @State private var vm = HomeVM()
     @State private var showAddSheet = false
-    
+
     let columns = [
         GridItem(.flexible(), spacing: 16),
         GridItem(.flexible(), spacing: 16)
     ]
-    
-    let previewCats: [(String, Int)]
-    
-    init(previewCats: [(String, Int)] = []) {
+
+    let previewCats: [Cat]
+
+    init(previewCats: [Cat] = []) {
         self.previewCats = previewCats
     }
-    
-    
+
     var body: some View {
+
         NavigationStack {
+
             GeometryReader { geometry in
+
                 ScrollView {
+
                     VStack(alignment: .leading, spacing: 32) {
-                        
+
                         HomeHeader(
                             totalCats: previewCats.count,
                             onCameraTap: {
                                 showAddSheet = true
                             }
                         )
-                        
-                        
-                        
+
                         if previewCats.isEmpty {
-                            
+
                             EmptyState {
                                 showAddSheet = true
                             }
                             .frame(minHeight: geometry.size.height * 0.6)
-                            
+
                         } else {
-                            
-                            LazyVGrid(columns: columns, spacing: 30) {
-                                
-                                ForEach(previewCats, id: \.0) { cat in
-                                    
-                                    CatCard(
-                                        name: cat.0,
-                                        encounters: cat.1
-                                    )
-                                    
+
+                            LazyVGrid(
+                                columns: columns,
+                                spacing: 24
+                            ) {
+
+                                ForEach(previewCats) { cat in
+
+                                    CatCard(cat: cat)
+
                                 }
-                                
+
                             }
-                            
+
                         }
+
                     }
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 24)
                     .padding(.top, 12)
                     .padding(.bottom, 32)
-                    
+
                 }
-                
+
             }
-            
+
         }
         .sheet(isPresented: $showAddSheet) {
+
             NavigationStack {
                 AddView()
             }
+
         }
+
     }
+
 }
 
 #Preview("Empty") {
@@ -85,12 +91,14 @@ struct HomeView: View {
 }
 
 #Preview("With Cats") {
+
     HomeView(
         previewCats: [
-            ("Mochi", 5),
-            ("Oyen", 13),
-            ("Latte", 2),
-            ("Oreo", 7)
+            PreviewData.cat(name: "Mochi", encounters: 5),
+            PreviewData.cat(name: "Oyen", encounters: 13),
+            PreviewData.cat(name: "Latte", encounters: 2),
+            PreviewData.cat(name: "Oreo", encounters: 7)
         ]
     )
+
 }

@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftData
+import UIKit
 
 @Model
 final class Cat {
@@ -18,6 +19,17 @@ final class Cat {
 
     @Relationship(deleteRule: .cascade)
     var encounters: [Encounter]
+    
+    var coverImage: UIImage? {
+        guard let data = encounters
+            .max(by: { $0.date < $1.date })?
+            .photo
+        else {
+            return nil
+        }
+
+        return UIImage(data: data)
+    }
 
     init(
         name: String? = nil,

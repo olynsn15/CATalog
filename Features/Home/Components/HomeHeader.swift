@@ -19,27 +19,30 @@ struct HomeHeader: View {
                 
                 Spacer()
                 
-                if #available(iOS 26.0, *) {
-                    Button {
-                        onCameraTap()
-                    } label: {
-                        Image(systemName: "camera.fill")
-                            .font(.title3.weight(.semibold))
-                            .frame(width: 48, height: 48)
-                            .contentShape(Circle())
-                    }
-                    .buttonStyle(.glass)
-                } else {
-                    // Fallback on earlier versions
+                Button {
+                    onCameraTap()
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.title3.bold())
+                        .foregroundStyle(.white)
+                        .frame(width: 44, height: 44)
+                        .background(.orange)
+                        .clipShape(Circle())
+                        .shadow(
+                            color: .black.opacity(0.15),
+                            radius: 8,
+                            x: 0,
+                            y: 4
+                        )
                 }
             }
             
             VStack(alignment: .leading, spacing: 2) {
-
+                
                 Text("You've met")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
-
+                
                 Text("\(totalCats) cats")
                     .font(.title.bold())
             }
