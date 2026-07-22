@@ -10,7 +10,9 @@ import SwiftUI
 struct HomeView: View {
 
     @State private var vm = HomeVM()
+
     @State private var showAddSheet = false
+    @State private var selectedImage: SelectedImage?
 
     let columns = [
         GridItem(.flexible(), spacing: 16),
@@ -34,16 +36,19 @@ struct HomeView: View {
                     VStack(alignment: .leading, spacing: 32) {
 
                         HomeHeader(
-                            totalCats: previewCats.count,
-                            onCameraTap: {
-                                showAddSheet = true
-                            }
-                        )
+                            totalCats: previewCats.count
+                        ) {
+
+                            showAddSheet = true
+
+                        }
 
                         if previewCats.isEmpty {
 
                             EmptyState {
+
                                 showAddSheet = true
+
                             }
                             .frame(minHeight: geometry.size.height * 0.6)
 
@@ -72,15 +77,38 @@ struct HomeView: View {
                 }
 
             }
+            .navigationDestination(item: $selectedImage) { selectedImage in
+
+                AddView(
+                    image: selectedImage.image
+                )
+
+            }
 
         }
         .sheet(isPresented: $showAddSheet) {
 
-            NavigationStack {
-                AddEncounterSheet()
-                    .presentationDetents([.fraction(0.35)])
-                    .presentationDragIndicator(.visible)
-            }
+            AddSourceSheet(
+
+                onCameraTap: {
+
+                    // TODO:
+                    // Camera
+
+                },
+
+                onLibraryImageSelected: { image in
+
+                    showAddSheet = false
+
+                    selectedImage = SelectedImage(
+                        image: image
+                    )
+
+                }
+
+            )
+            .presentationDetents([.height(280)])
 
         }
 
@@ -89,7 +117,9 @@ struct HomeView: View {
 }
 
 #Preview("Empty") {
+
     HomeView()
+
 }
 
 #Preview("With Cats") {

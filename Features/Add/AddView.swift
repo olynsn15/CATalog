@@ -14,18 +14,20 @@ struct AddView: View {
 
     var body: some View {
         ScrollView {
-            VStack(spacing: 28) {
+            VStack(spacing: 30) {
                 previewSection
+                
+                VStack(spacing: 16) {
+                    modeSection
 
-                modeSection
+                    if vm.mode == .new {
+                        newCatSection
+                    } else {
+                        existingCatSection
+                    }
 
-                if vm.mode == .new {
-                    newCatSection
-                } else {
-                    existingCatSection
+                    notesSection
                 }
-
-                notesSection
 
                 saveButton
             }
@@ -67,7 +69,7 @@ private extension AddView {
     }
 
     var newCatSection: some View {
-        VStack(alignment: .leading, spacing: 20) {
+        VStack(alignment: .leading, spacing: 30) {
 
             VStack(alignment: .leading, spacing: 8) {
                 Text("Cat Name")
@@ -77,22 +79,33 @@ private extension AddView {
                     "e.g. Mochi",
                     text: $vm.catName
                 )
-                .textFieldStyle(.roundedBorder)
+                .padding(12)
+                .background(Color(.systemGray6))
+                .clipShape(RoundedRectangle(cornerRadius: 12))
             }
 
             VStack(alignment: .leading, spacing: 8) {
                 Text("Coat Color")
                     .font(.headline)
 
-                Picker(
-                    "Coat Color",
-                    selection: $vm.coatColor
-                ) {
+                Menu {
                     ForEach(CoatColor.allCases) { color in
-
-                        Text(color.rawValue.capitalized)
-                            .tag(color)
+                        Button(color.displayName) {
+                            vm.coatColor = color
+                        }
                     }
+                } label: {
+                    HStack {
+                        Text(vm.coatColor.displayName)
+
+                        Spacer()
+
+                        Image(systemName: "chevron.up.chevron.down")
+                            .foregroundStyle(.secondary)
+                    }
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
             }
         }
