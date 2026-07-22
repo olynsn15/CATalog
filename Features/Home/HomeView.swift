@@ -77,7 +77,9 @@ struct HomeView: View {
         .sheet(isPresented: $showAddSheet) {
 
             NavigationStack {
-                AddView()
+                AddEncounterSheet()
+                    .presentationDetents([.fraction(0.35)])
+                    .presentationDragIndicator(.visible)
             }
 
         }

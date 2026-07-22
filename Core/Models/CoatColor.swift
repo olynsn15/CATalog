@@ -6,7 +6,7 @@
 //
 
 
-enum CoatColor: String, Codable, CaseIterable {
+enum CoatColor: String, Codable, CaseIterable, Identifiable {
     case orange
     case black
     case white
@@ -17,6 +17,9 @@ enum CoatColor: String, Codable, CaseIterable {
     case tabby
     case tortoiseshell
     case other
+    case unknown
+    
+    var id: Self { self }
     
     var displayName: String {
         switch self {
@@ -30,6 +33,7 @@ enum CoatColor: String, Codable, CaseIterable {
         case .tabby: return "Tabby"
         case .tortoiseshell: return "Tortoiseshell"
         case .other: return "Other"
+        case .unknown: return "Unknown"
         }
     }
 }
