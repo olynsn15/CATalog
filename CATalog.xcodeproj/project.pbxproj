@@ -7,51 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C9BFFEEC9348387A4CCA99 /* CameraPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C83A651A185BD361A440317 /* CameraPicker.swift */; };
 		2B36858CA9A2153067E0E127 /* CatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEB7E3FFFA889D425FD08E8 /* CatDetailView.swift */; };
 		2BA739613E0467A249DDF58C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF91F5ADA2C5B2A1783FFE28 /* Assets.xcassets */; };
-		2FFED3253010FC2D00D65CFB /* AddSourceSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFED3243010FC2D00D65CFB /* AddSourceSheet.swift */; };
-		2FFED3283011017800D65CFB /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFED3273011017700D65CFB /* AddView.swift */; };
-		2FFED32A3011027F00D65CFB /* AddVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFED3293011027F00D65CFB /* AddVM.swift */; };
-		2FFED32D30110B1A00D65CFB /* SelectedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFED32C30110B1A00D65CFB /* SelectedImage.swift */; };
 		3DF949167D4FA8822E71099E /* CatCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7406040BA9DB99127C6FEEFA /* CatCard.swift */; };
 		3EE22B99AAB89485F2A080E5 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D057F6A2FBD607C736656CC /* HomeHeader.swift */; };
 		3F03F57E66E71B03DD19717E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA625C0D97DC723ECF71AB8 /* HomeView.swift */; };
+		46E5E323BF6D15E3F509D941 /* SelectedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8ECFE6AEA318EA390000A1 /* SelectedImage.swift */; };
 		559A4FAA499DEB4297F8774A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A348B86B76B3141BA981FD /* CameraService.swift */; };
 		7D2655C24CB852CA247B06D5 /* PhotoLibraryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E97F14AFEE8A206978E1A8 /* PhotoLibraryService.swift */; };
 		8464DB00BD1F667522CE5836 /* CATalogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26B7E3DAB2331486C0AB585 /* CATalogApp.swift */; };
+		851645409A10F5FAB417F30D /* DropdownField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2C5C5CF3A362D05EB4CF60 /* DropdownField.swift */; };
 		8B977AC5A1E44CEF3318F345 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E9AA46ED072F1BE2D2B73C /* HomeVM.swift */; };
 		8C1CEF51AAD1ACA40544AFCA /* EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA779A93B68A332FA8C9839D /* EmptyState.swift */; };
+		92EFE2F4C7A4B4AFD2F9B5BC /* AddVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97694F97F1E937B7CA79B0F0 /* AddVM.swift */; };
 		AB5BF18A82F9E4F7140B2681 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD4CE31402A14C8DD502AC /* PreviewData.swift */; };
 		B2AD331F453D9AFB288E9F3F /* CatDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1A5C943CF2F926AB32B92C /* CatDetailVM.swift */; };
 		B3AC7C2E7B20F5D7730897D8 /* AddOptionTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2239C979758E06D716ECEAB7 /* AddOptionTile.swift */; };
 		B9E4695272F0520D14F6A138 /* Encounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDFEAAC4D865A51EBB04BA1 /* Encounter.swift */; };
 		BD82B43DE8B234BB1476925D /* CoatColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031F22EF6135EFBB397C8E9 /* CoatColor.swift */; };
 		C4C666D97EB6E15EDE3838AA /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF1D1A4EDCCAEC636BECF933 /* Cat.swift */; };
+		DE1E306164D964D12326237F /* AddSourceSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDDA07FD729783BD65FBAB4 /* AddSourceSheet.swift */; };
 		E2F392DDE27B0FB99157F177 /* AchievementService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F2ECC1B4F3752A85506658 /* AchievementService.swift */; };
+		E7BD9FCEC9227CF8AF31D210 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BBACC2C4C349A1CB3CB55D /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0031F22EF6135EFBB397C8E9 /* CoatColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoatColor.swift; sourceTree = "<group>"; };
 		10E9AA46ED072F1BE2D2B73C /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
+		14BBACC2C4C349A1CB3CB55D /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		212EFAAEB0DECF04584D4396 /* CATalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CATalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2239C979758E06D716ECEAB7 /* AddOptionTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOptionTile.swift; sourceTree = "<group>"; };
-		2FFED3243010FC2D00D65CFB /* AddSourceSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceSheet.swift; sourceTree = "<group>"; };
-		2FFED3273011017700D65CFB /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
-		2FFED3293011027F00D65CFB /* AddVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVM.swift; sourceTree = "<group>"; };
-		2FFED32C30110B1A00D65CFB /* SelectedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImage.swift; sourceTree = "<group>"; };
 		37E97F14AFEE8A206978E1A8 /* PhotoLibraryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryService.swift; sourceTree = "<group>"; };
+		3EDDA07FD729783BD65FBAB4 /* AddSourceSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSourceSheet.swift; sourceTree = "<group>"; };
 		4BA625C0D97DC723ECF71AB8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6C83A651A185BD361A440317 /* CameraPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPicker.swift; sourceTree = "<group>"; };
 		7406040BA9DB99127C6FEEFA /* CatCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCard.swift; sourceTree = "<group>"; };
 		87A348B86B76B3141BA981FD /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		8B1A5C943CF2F926AB32B92C /* CatDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailVM.swift; sourceTree = "<group>"; };
 		8D057F6A2FBD607C736656CC /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		97694F97F1E937B7CA79B0F0 /* AddVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVM.swift; sourceTree = "<group>"; };
 		9BDFEAAC4D865A51EBB04BA1 /* Encounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encounter.swift; sourceTree = "<group>"; };
 		B6F2ECC1B4F3752A85506658 /* AchievementService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementService.swift; sourceTree = "<group>"; };
 		C26B7E3DAB2331486C0AB585 /* CATalogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CATalogApp.swift; sourceTree = "<group>"; };
 		CBEB7E3FFFA889D425FD08E8 /* CatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailView.swift; sourceTree = "<group>"; };
+		CE8ECFE6AEA318EA390000A1 /* SelectedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedImage.swift; sourceTree = "<group>"; };
 		CF1D1A4EDCCAEC636BECF933 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		CF91F5ADA2C5B2A1783FFE28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA779A93B68A332FA8C9839D /* EmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyState.swift; sourceTree = "<group>"; };
+		DB2C5C5CF3A362D05EB4CF60 /* DropdownField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownField.swift; sourceTree = "<group>"; };
 		DEBD4CE31402A14C8DD502AC /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +120,10 @@
 		D154AB33D335E3F7CA7ED574 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2FFED32C30110B1A00D65CFB /* SelectedImage.swift */,
 				CF1D1A4EDCCAEC636BECF933 /* Cat.swift */,
 				0031F22EF6135EFBB397C8E9 /* CoatColor.swift */,
 				9BDFEAAC4D865A51EBB04BA1 /* Encounter.swift */,
+				CE8ECFE6AEA318EA390000A1 /* SelectedImage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				2239C979758E06D716ECEAB7 /* AddOptionTile.swift */,
+				6C83A651A185BD361A440317 /* CameraPicker.swift */,
+				DB2C5C5CF3A362D05EB4CF60 /* DropdownField.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -154,9 +160,9 @@
 		F344B64E991C0BC3A2A00740 /* Add */ = {
 			isa = PBXGroup;
 			children = (
-				2FFED3293011027F00D65CFB /* AddVM.swift */,
-				2FFED3243010FC2D00D65CFB /* AddSourceSheet.swift */,
-				2FFED3273011017700D65CFB /* AddView.swift */,
+				3EDDA07FD729783BD65FBAB4 /* AddSourceSheet.swift */,
+				14BBACC2C4C349A1CB3CB55D /* AddView.swift */,
+				97694F97F1E937B7CA79B0F0 /* AddVM.swift */,
 				E799AE716CF5AE22D951070B /* Components */,
 			);
 			path = Add;
@@ -247,16 +253,18 @@
 			files = (
 				E2F392DDE27B0FB99157F177 /* AchievementService.swift in Sources */,
 				B3AC7C2E7B20F5D7730897D8 /* AddOptionTile.swift in Sources */,
-				2FFED32D30110B1A00D65CFB /* SelectedImage.swift in Sources */,
-				2FFED3283011017800D65CFB /* AddView.swift in Sources */,
+				DE1E306164D964D12326237F /* AddSourceSheet.swift in Sources */,
+				92EFE2F4C7A4B4AFD2F9B5BC /* AddVM.swift in Sources */,
+				E7BD9FCEC9227CF8AF31D210 /* AddView.swift in Sources */,
 				8464DB00BD1F667522CE5836 /* CATalogApp.swift in Sources */,
+				01C9BFFEEC9348387A4CCA99 /* CameraPicker.swift in Sources */,
 				559A4FAA499DEB4297F8774A /* CameraService.swift in Sources */,
 				C4C666D97EB6E15EDE3838AA /* Cat.swift in Sources */,
 				3DF949167D4FA8822E71099E /* CatCard.swift in Sources */,
 				B2AD331F453D9AFB288E9F3F /* CatDetailVM.swift in Sources */,
 				2B36858CA9A2153067E0E127 /* CatDetailView.swift in Sources */,
 				BD82B43DE8B234BB1476925D /* CoatColor.swift in Sources */,
-				2FFED3253010FC2D00D65CFB /* AddSourceSheet.swift in Sources */,
+				851645409A10F5FAB417F30D /* DropdownField.swift in Sources */,
 				8C1CEF51AAD1ACA40544AFCA /* EmptyState.swift in Sources */,
 				B9E4695272F0520D14F6A138 /* Encounter.swift in Sources */,
 				3EE22B99AAB89485F2A080E5 /* HomeHeader.swift in Sources */,
@@ -264,7 +272,7 @@
 				3F03F57E66E71B03DD19717E /* HomeView.swift in Sources */,
 				7D2655C24CB852CA247B06D5 /* PhotoLibraryService.swift in Sources */,
 				AB5BF18A82F9E4F7140B2681 /* PreviewData.swift in Sources */,
-				2FFED32A3011027F00D65CFB /* AddVM.swift in Sources */,
+				46E5E323BF6D15E3F509D941 /* SelectedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +343,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3R47563279;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of cats to keep track of your encounters.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
@@ -419,6 +428,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3R47563279;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Take photos of cats to keep track of your encounters.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;

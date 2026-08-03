@@ -9,9 +9,9 @@ import SwiftUI
 
 struct AddView: View {
     let image: UIImage
-
+    
     @State private var vm = AddVM()
-
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 30) {
@@ -19,16 +19,16 @@ struct AddView: View {
                 
                 VStack(spacing: 16) {
                     modeSection
-
+                    
                     if vm.mode == .new {
                         newCatSection
                     } else {
                         existingCatSection
                     }
-
+                    
                     notesSection
                 }
-
+                
                 saveButton
             }
             .padding(24)
@@ -47,19 +47,19 @@ private extension AddView {
             .frame(maxWidth: .infinity)
             .clipShape(RoundedRectangle(cornerRadius: 20))
     }
-
+    
     var modeSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("This cat is...")
                 .font(.headline)
-
+            
             Picker(
                 "Mode",
                 selection: $vm.mode
             ) {
-
+                
                 ForEach(AddVM.Mode.allCases) { mode in
-
+                    
                     Text(mode.title)
                         .tag(mode)
                 }
@@ -67,14 +67,14 @@ private extension AddView {
             .pickerStyle(.segmented)
         }
     }
-
+    
     var newCatSection: some View {
         VStack(alignment: .leading, spacing: 30) {
-
+            
             VStack(alignment: .leading, spacing: 8) {
                 Text("Cat Name")
                     .font(.headline)
-
+                
                 TextField(
                     "e.g. Mochi",
                     text: $vm.catName
@@ -83,72 +83,57 @@ private extension AddView {
                 .background(Color(.systemGray6))
                 .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-
+            
             VStack(alignment: .leading, spacing: 8) {
                 Text("Coat Color")
                     .font(.headline)
-
-                Menu {
+                
+                DropdownField(
+                    title: vm.coatColor == .unknown ? "" : vm.coatColor.displayName,
+                    placeholder: "Select coat color"
+                ) {
+                    
                     ForEach(CoatColor.allCases) { color in
+                        
                         Button(color.displayName) {
                             vm.coatColor = color
                         }
+                        
                     }
-                } label: {
-                    HStack {
-                        Text(vm.coatColor.displayName)
-
-                        Spacer()
-
-                        Image(systemName: "chevron.up.chevron.down")
-                            .foregroundStyle(.secondary)
-                    }
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                    
                 }
             }
         }
     }
-
+    
     var existingCatSection: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("Choose Cat")
                 .font(.headline)
-
-            Menu {
+            
+            DropdownField(
+                title: vm.selectedExistingCat,
+                placeholder: "Select a cat"
+            ) {
+                
                 ForEach(vm.existingCats, id: \.self) { cat in
-
+                    
                     Button(cat) {
                         vm.selectedExistingCat = cat
                     }
+                    
                 }
-            } label: {
-                HStack {
-                    Text(
-                        vm.selectedExistingCat.isEmpty
-                        ? "Select a cat"
-                        : vm.selectedExistingCat
-                    )
-
-                    Spacer()
-
-                    Image(systemName: "chevron.up.chevron.down")
-                        .foregroundStyle(.secondary)
-                }
-                .padding()
-                .background(Color(.systemGray6))
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                
             }
         }
     }
-
+    
     var notesSection: some View {
         VStack(alignment: .leading, spacing: 8) {
-
+            
             Text("Notes")
                 .font(.headline)
-
+            
             TextField(
                 "Optional...",
                 text: $vm.notes,
@@ -160,13 +145,13 @@ private extension AddView {
             .clipShape(RoundedRectangle(cornerRadius: 12))
         }
     }
-
+    
     var saveButton: some View {
         Button {
             // TODO:
             // Save Cat / Encounter
         } label: {
-
+            
             Text("Save Encounter")
                 .fontWeight(.semibold)
                 .foregroundStyle(.white)
